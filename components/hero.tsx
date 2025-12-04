@@ -10,7 +10,7 @@ export function Hero() {
         <div className="space-y-6">
           <div>
             <p className="text-primary font-semibold text-lg mb-2">Welcome</p>
-            <h1 className="text-4xl md:text-6xl font-bold text-balance leading-tight mb-2">Abdulrazak Iliyasu Mafindi</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-balance leading-tight mb-2">I'm Abdulrazak Iliyasu Mafindi</h1>
           </div>
 
           <div>
@@ -22,9 +22,21 @@ export function Hero() {
             </p>
           </div>
 
+
+          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
+            <h3 className="font-semibold text-primary mb-2">Generative AI Expertise</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              I'm passionate about Generative AI and its intersection with web development. I build intelligent
+              applications leveraging LLMs, prompt engineering, and AI-powered features to create next-generation user
+              experiences. From RAG systems to fine-tuned models, I integrate cutting-edge AI into Web3 dApps and modern
+              web applications.
+            </p>
+          </div>
+
           <p className="text-base text-muted-foreground leading-relaxed max-w-lg">
-            I specialize in modern React, Next.js, and blockchain technologies. I create pixel-perfect UIs with
-            exceptional user experiences, from traditional web apps to innovative Web3 dApps.
+            I specialize in modern React, Next.js, blockchain technologies, and AI integration. I create pixel-perfect
+            UIs with exceptional user experiences, from traditional web apps to innovative Web3 dApps enhanced with
+            intelligent AI features.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-4">
@@ -43,7 +55,7 @@ export function Hero() {
               View Work
             </Button>
             <Button variant="ghost" size="lg" asChild>
-              <a href="/resume.pdf" download>
+              <a href="/AbdulrazakLatex_resume.pdf" download>
                 <Download className="mr-2" size={18} />
                 Resume
               </a>
@@ -57,7 +69,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hidden md:block relative h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg border border-border">
+        <div className="hidden md:block relative h-96 bg-linear-to-br from-primary/20 to-accent/20 rounded-lg border border-border">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <div className="text-6xl font-bold text-primary/40">{"</>"}</div>
