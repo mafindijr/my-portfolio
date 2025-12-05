@@ -12,46 +12,46 @@ const PROJECTS = [
     featured: true,
   },
   {
-    title: "E-Commerce Platform",
+    title: "Event Scheduler Bot",
     description:
-      "Full-stack e-commerce solution with product filtering, cart management, and Stripe payment integration. Responsive design optimized for all devices.",
-    tags: ["Next.js", "React", "Stripe", "PostgreSQL"],
-    github: "#",
-    live: "#",
+      " Telegram Integration, Bot to create, manage, and track events with blockchain-inspired features. Responsive design optimized for all devices. Just Front-End only",
+    tags: ["HTML", "CSS", "Javascript"],
+    github: "https://github.com/mafindijr/managemyschedulebot",
+    live: "https://t.me/Managemyshedulebot",
     featured: true,
   },
   {
-    title: "NFT Marketplace",
-    description:
-      "Decentralized NFT marketplace where users can mint, buy, and sell digital assets. Integrated with IPFS for metadata storage and smart contracts.",
-    tags: ["Solidity", "Web3.js", "React", "Ethereum"],
-    github: "#",
-    live: "#",
-    featured: true,
-  },
-  {
-    title: "Real-time Chat App",
-    description:
-      "End-to-end encrypted messaging platform with real-time notifications. Features user authentication and message history sync.",
-    tags: ["Next.js", "Supabase", "Real-time", "WebSockets"],
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "Portfolio V1",
+    title: "Portfolio Website",
     description:
       "Personal portfolio showcasing previous projects and case studies. Designed with attention to performance and accessibility.",
-    tags: ["Next.js", "Framer Motion", "TailwindCSS"],
+    tags: ["Next.js", "TypeScript", "Framer Motion", "TailwindCSS", "Shadcn Ui"],
     github: "#",
     live: "#",
+    featured: true,
   },
   {
-    title: "Design System Component Library",
+    title: "HNG Cohort 13 Stage One Task",
+    description:
+      "This project is part of the HNG Cohort 13 internship program. It consists of a contact page and an about page, showcasing the skills and learning acquired during the internship. The goal is to facilitate communication and provide information about the intern.",
+    tags: ["HTML", "CSS", "Javascript",],
+    github: "https://github.com/mafindijr/hng-internship",
+    live: "https://mafindijr.github.io/HNG-internship-stage-1-task/",
+  },
+  {
+    title: "Color Guessing Game",
+    description:
+      "Web Game to guess RGB values based on displayed colors.",
+    tags: ["HTML", "CSS", "javascript"],
+    github: "https://github.com/mafindijr/color-guess-game",
+    live: "https://abdul-color-guess-game.netlify.app/",
+  },
+  {
+    title: "Design a Responsive Landing Page and Dashboard",
     description:
       "Reusable component library built with React and TypeScript. Fully documented with Storybook for team collaboration.",
-    tags: ["React", "TypeScript", "Storybook", "CSS-in-JS"],
-    github: "#",
-    live: "#",
+    tags: ["HTML", "Javascript", "TailwindCss"],
+    github: "https://github.com/mafindijr/Tcomponent",
+    live: "https://tcomponent.vercel.app/",
   },
 ]
 
