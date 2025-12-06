@@ -30,7 +30,9 @@ export function About() {
               className="w-48 h-48 rounded-lg overflow-hidden border-4 border-primary/30 shadow-lg"
               style={{ transform: "rotate(-6deg)" }}
             >
-              <img src="/IMG_5546.JPG" alt="Your profile picture" className="w-full h-full object-cover" />
+              <a href="/IMG_5546.JPG" target="_blank">
+                 <img src="/IMG_5546.JPG" alt="mafindijr" className="w-full h-full object-cover" />
+              </a>
             </div>
           </div>
 
