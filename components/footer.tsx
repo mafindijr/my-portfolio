@@ -2,9 +2,9 @@ import { Github, Linkedin, Twitter, Mail } from "lucide-react"
 
 const SOCIAL_LINKS = [
   { label: "GitHub", icon: Github, href: "https://github.com/mafindijr" },
-  { label: "LinkedIn", icon: Linkedin, href: "#" },
-  { label: "Twitter", icon: Twitter, href: "#" },
-  { label: "Email", icon: Mail, href: "mailto:mafindijr.abdulrazaqiliyasumafindi@gmail.com" },
+  { label: "LinkedIn", icon: Linkedin, href: "http://www.linkedin.com/in/abdulrazak-mafindi-iliyasu-286538337?utm_campaign=share_via&utm_content=profle&utm_medium=android_app" },
+  { label: "Twitter", icon: Twitter, href: "http://x.com/JnrMafindi?s=09" },
+  { label: "Email", icon: Mail, href: "mailto:abdulrazaqiliyasumafindi@gmail.com" },
 ]
 
 export function Footer() {
@@ -42,7 +42,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>&copy; 2025 Mafindijr. All rights reserved.</p>
+          <p>&copy; 2025 Mafindijr. <span className="font-mono text-primary text-[16px] font-bold ">Portfolio</span></p>
           <p>Designed & built with Next.js, React, and TailwindCSS</p>
         </div>
       </div>
