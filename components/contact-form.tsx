@@ -1,11 +1,11 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, MessageSquare, User } from "lucide-react"
+// import { sendContactEmail } from "@/app/actions/contact"
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -18,27 +18,23 @@ export function ContactForm() {
 
     try {
       const formData = new FormData(e.currentTarget)
-      const data = {
-        name: formData.get("name"),
-        email: formData.get("email"),
-        subject: formData.get("subject"),
-        message: formData.get("message"),
-      }
 
-      // Replace with your actual form submission endpoint
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+      const result = await sendContactEmail({
+        name: formData.get("name") as string,
+        email: formData.get("email") as string,
+        subject: formData.get("subject") as string,
+        message: formData.get("message") as string,
       })
 
-      if (response.ok) {
+      if (result.success) {
         setSubmitStatus("success")
         e.currentTarget.reset()
+        setTimeout(() => setSubmitStatus("idle"), 5000)
       } else {
         setSubmitStatus("error")
       }
-    } catch {
+    } catch (error) {
+      console.log("[v0] Contact form error:", error)
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
@@ -129,7 +125,7 @@ export function ContactForm() {
                 />
               </div>
 
-              <Button type="submit" disabled={isSubmitting} className="w-full cursor-pointer">
+              <Button type="submit" disabled={isSubmitting} className="w-full">
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
 
