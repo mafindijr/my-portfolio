@@ -2,31 +2,31 @@ import { Briefcase, Calendar } from "lucide-react"
 
 const EXPERIENCE = [
   {
-    company: "Tech Company Name",
-    position: "Senior Frontend Developer",
+    company: "Sandlip Oasis",
+    position: "Frontend Developer",
     description:
-      "Led frontend development of customer-facing applications, mentored junior developers, and optimized performance.",
-    period: "2022 - Present",
-    duration: "2 years",
+      "frontend development of customer-facing applications, mentored junior developers, and optimized performance.",
+    period: "2024 - Present",
+    duration: "2 year",
     technologies: ["React", "Next.js", "TypeScript", "Web3"],
   },
   {
-    company: "Startup XYZ",
-    position: "Full Stack Developer",
-    description: "Built and deployed blockchain-based solutions, managed databases, and implemented smart contracts.",
-    period: "2020 - 2022",
-    duration: "2 years",
-    technologies: ["Solidity", "Web3.js", "React", "Node.js"],
-  },
-  {
-    company: "Web Agency",
+    company: "Kena",
     position: "Frontend Developer",
-    description:
-      "Developed responsive web applications for various clients, focused on UI/UX and performance optimization.",
-    period: "2019 - 2020",
-    duration: "1 year",
-    technologies: ["React", "TailwindCSS", "JavaScript", "CSS"],
+    description: "frontend development of a fintech web app with Ai integration, a payment base system.",
+    period: "2025 - Present",
+    duration: "2 years",
+    technologies: ["React", "Next.js", "TypeScript"],
   },
+  // {
+  //   company: "Web Agency",
+  //   position: "Frontend Developer",
+  //   description:
+  //     "Developed responsive web applications for various clients, focused on UI/UX and performance optimization.",
+  //   period: "2019 - 2020",
+  //   duration: "1 year",
+  //   technologies: ["React", "TailwindCSS", "JavaScript", "CSS"],
+  // },
 ]
 
 export function Experience() {
@@ -45,7 +45,7 @@ export function Experience() {
               className="relative pl-8 pb-6 border-l-2 border-primary/30 hover:border-primary/60 transition"
             >
               {/* Timeline dot */}
-              <div className="absolute -left-4 top-0 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
+              <div className="absolute -left-3 top-0 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
 
               <div className="bg-background border border-border rounded-lg p-6 hover:border-primary/50 transition">
                 <div className="flex items-start justify-between mb-2">
