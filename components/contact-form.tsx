@@ -16,30 +16,30 @@ export function ContactForm() {
     setIsSubmitting(true)
     setSubmitStatus("idle")
 
-    try {
-      const formData = new FormData(e.currentTarget)
+  //   try {
+  //     const formData = new FormData(e.currentTarget)
 
-      const result = await sendContactEmail({
-        name: formData.get("name") as string,
-        email: formData.get("email") as string,
-        subject: formData.get("subject") as string,
-        message: formData.get("message") as string,
-      })
+  //     const result = await sendContactEmail({
+  //       name: formData.get("name") as string,
+  //       email: formData.get("email") as string,
+  //       subject: formData.get("subject") as string,
+  //       message: formData.get("message") as string,
+  //     })
 
-      if (result.success) {
-        setSubmitStatus("success")
-        e.currentTarget.reset()
-        setTimeout(() => setSubmitStatus("idle"), 5000)
-      } else {
-        setSubmitStatus("error")
-      }
-    } catch (error) {
-      console.log("[v0] Contact form error:", error)
-      setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+  //     if (result.success) {
+  //       setSubmitStatus("success")
+  //       e.currentTarget.reset()
+  //       setTimeout(() => setSubmitStatus("idle"), 5000)
+  //     } else {
+  //       setSubmitStatus("error")
+  //     }
+  //   } catch (error) {
+  //     console.log("[v0] Contact form error:", error)
+  //     setSubmitStatus("error")
+  //   } finally {
+  //     setIsSubmitting(false)
+  //   }
+  // }
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
