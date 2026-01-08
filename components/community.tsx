@@ -80,7 +80,7 @@ export function Community: Community[] () {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {communities.map((community) => {
+          {communities.map((community: Community) => {
             const IconComponent = community.icon
             return (
               <Card
@@ -104,7 +104,7 @@ export function Community: Community[] () {
                 <div className="flex items-center justify-between">
                   <div className="flex flex-wrap gap-2">
                     {community.badges.map((badge) => (
-                      <Badge key={badge} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
+                      <Badge key={badge} variant="secondary"  className="bg-primary/10 text-primary hover:bg-primary/20">
                         {badge}
                       </Badge>
                     ))}
