@@ -18,7 +18,7 @@ type Community = {
  
 
 
-export function Community() : JSX.Element {
+export function Community () {
 
   const communities: Community[] = [
     {
