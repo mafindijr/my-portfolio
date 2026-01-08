@@ -4,8 +4,22 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Users, MessageCircle, BookOpen, Zap } from "lucide-react"
 
-export function Community() {
-  
+
+type Community = {
+  id: number
+  name: string
+  role: string
+  members: string
+  description: string
+  icon: React.ElementType
+  badges: string[]
+}
+
+ 
+
+
+export function Community: Community[] () {
+
   const communities = [
     {
       id: 1,
