@@ -18,9 +18,9 @@ type Community = {
  
 
 
-export function Community: Community[] () {
+export function Community() : JSX.Element {
 
-  const communities = [
+  const communities: Community[] = [
     {
       id: 1,
       name: "Africa Quack Believers Hackquest Web3 Community",
