@@ -5,6 +5,7 @@ import { Experience } from "@/components/experience"
 import { About } from "@/components/about"
 import { Certifications } from "@/components/certifications"
 import { Reviews } from "@/components/reviews"
+import { Community } from "@/components/community"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 
@@ -18,6 +19,7 @@ export default function Home() {
       <About />
       <Certifications />
       <Reviews />
+      <Community />
       <ContactForm />
       <Footer />
     </main>

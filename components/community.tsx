@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Users, MessageCircle, BookOpen, Zap } from "lucide-react"
 
 export function Community() {
+  
   const communities = [
     {
       id: 1,
@@ -35,7 +36,7 @@ export function Community() {
       badges: ["Member", "Contributor"],
     },
     {
-      id: 4,
+      id: 5,
       name: "GDG Community Jalingo",
       role: "Active member and volunteer",
       members: "500+",
@@ -44,37 +45,19 @@ export function Community() {
       badges: ["Logistics", "volunteer"],
     },
     {
-      id: 4,
+      id: 6,
       name: "Web3 Developers(X)",
       role: "Active Member",
       members: "500+",
       description: "Contributing and sharing resources and growth",
       icon: Users,
       badges: ["developer"],
-    },
-    {
-      id: 4,
-      name: "Tech Meetups & Workshops",
-      role: "Speaker & Organizer",
-      members: "500+",
-      description: "Speaking at tech meetups and organizing workshops on AI, blockchain, and modern web development.",
-      icon: MessageCircle,
-      badges: ["Speaker", "Organizer"],
-    },
-    {
-      id: 4,
-      name: "Tech Meetups & Workshops",
-      role: "Speaker & Organizer",
-      members: "500+",
-      description: "Speaking at tech meetups and organizing workshops on AI, blockchain, and modern web development.",
-      icon: MessageCircle,
-      badges: ["Speaker", "Organizer"],
-    },
+    }
   ]
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 bg-background">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-4 sm:px-6 md:py-24 md:px-12 lg:px-8 bg-background">
+      <div className="max-w-7xl mx-auto">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground text-balance">Community Involvement</h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
