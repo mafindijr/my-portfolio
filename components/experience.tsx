@@ -1,4 +1,7 @@
+"use client"
+
 import { Briefcase, Calendar } from "lucide-react"
+import { motion } from "framer-motion"
 
 const EXPERIENCE = [
   {
@@ -29,25 +32,79 @@ const EXPERIENCE = [
   // },
 ]
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 100,
+      damping: 15,
+    },
+  },
+}
+
+const dotVariants = {
+  hidden: { scale: 0 },
+  visible: {
+    scale: 1,
+    transition: {
+      type: "spring" as const,
+      stiffness: 200,
+      damping: 10,
+    },
+  },
+}
+
 export function Experience() {
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30 border-b border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
           <p className="text-muted-foreground">My professional journey and key roles in web development</p>
-        </div>
+        </motion.div>
 
-        <div className="space-y-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="space-y-6"
+        >
           {EXPERIENCE.map((job, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={itemVariants}
               className="relative pl-8 pb-6 border-l-2 border-primary/30 hover:border-primary/60 transition"
             >
               {/* Timeline dot */}
-              <div className="absolute -left-3 top-0 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
+              <motion.div
+                variants={dotVariants}
+                className="absolute -left-3 top-0 w-6 h-6 bg-primary rounded-full border-4 border-background"
+              />
 
-              <div className="bg-background border border-border rounded-lg p-6 hover:border-primary/50 transition">
+              <motion.div
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                className="bg-background border border-border rounded-lg p-6 hover:border-primary/50 transition-colors hover:shadow-lg"
+              >
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex items-center gap-3">
                     <Briefcase size={20} className="text-primary" />
@@ -66,20 +123,37 @@ export function Experience() {
 
                 <p className="text-muted-foreground leading-relaxed mb-4">{job.description}</p>
 
-                <div className="flex flex-wrap gap-2">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{
+                    visible: {
+                      transition: {
+                        staggerChildren: 0.05,
+                      },
+                    },
+                  }}
+                  className="flex flex-wrap gap-2"
+                >
                   {job.technologies.map((tech) => (
-                    <span
+                    <motion.span
                       key={tech}
-                      className="text-xs px-3 py-1 rounded-full bg-accent/20 text-accent-foreground border border-accent/30 hover:bg-accent/30 transition"
+                      variants={{
+                        hidden: { opacity: 0, scale: 0.8 },
+                        visible: { opacity: 1, scale: 1 },
+                      }}
+                      whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                      className="text-xs px-3 py-1 rounded-full bg-accent/20 text-accent-foreground border border-accent/30 hover:bg-accent/30 transition cursor-default"
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

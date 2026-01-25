@@ -1,4 +1,7 @@
+"use client"
+
 import { Star, Quote } from "lucide-react"
+import { motion } from "framer-motion"
 
 const REVIEWS = [
   {
@@ -36,20 +39,57 @@ const REVIEWS = [
   },
 ]
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 100,
+      damping: 15,
+    },
+  },
+}
+
 export function Reviews() {
   return (
     <section id="reviews" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Reviews & Testimonials</h2>
           <p className="text-muted-foreground">What clients and collaborators have to say about working with me</p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid md:grid-cols-2 gap-6"
+        >
           {REVIEWS.map((review, index) => (
-            <div
+            <motion.div
               key={index}
-              className="relative bg-background border border-border rounded-lg p-6 hover:border-primary/50 transition"
+              variants={cardVariants}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="relative bg-background border border-border rounded-lg p-6 hover:border-primary/50 transition-colors hover:shadow-lg"
             >
               {/* Quote icon background */}
               <Quote size={32} className="absolute top-4 right-4 text-primary/10" />
@@ -58,7 +98,15 @@ export function Reviews() {
                 {/* Stars */}
                 <div className="flex gap-1">
                   {Array.from({ length: review.rating }).map((_, i) => (
-                    <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1, type: "spring", stiffness: 200 }}
+                    >
+                      <Star size={16} className="fill-yellow-400 text-yellow-400" />
+                    </motion.div>
                   ))}
                 </div>
 
@@ -80,9 +128,9 @@ export function Reviews() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

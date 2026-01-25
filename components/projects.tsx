@@ -1,5 +1,8 @@
+"use client"
+
 import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
 
 const PROJECTS = [
   {
@@ -55,6 +58,29 @@ const PROJECTS = [
   },
 ]
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 100,
+      damping: 15,
+    },
+  },
+}
+
 export function Projects() {
   const featuredProjects = PROJECTS.filter((p) => p.featured)
   const otherProjects = PROJECTS.filter((p) => !p.featured)
@@ -62,27 +88,53 @@ export function Projects() {
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30 border-y border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-muted-foreground">A selection of my recent work in frontend development and Web3</p>
-        </div>
+        </motion.div>
 
         {/* Featured Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid md:grid-cols-2 gap-6 mb-16"
+        >
           {featuredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} featured />
           ))}
-        </div>
+        </motion.div>
 
         {/* Other Projects */}
         {otherProjects.length > 0 && (
           <div>
-            <h3 className="text-2xl font-bold mb-6">More Projects</h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="text-2xl font-bold mb-6"
+            >
+              More Projects
+            </motion.h3>
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="grid md:grid-cols-3 gap-6"
+            >
               {otherProjects.map((project) => (
                 <ProjectCard key={project.title} project={project} />
               ))}
-            </div>
+            </motion.div>
           </div>
         )}
       </div>
@@ -97,23 +149,41 @@ interface ProjectCardProps {
 
 function ProjectCard({ project, featured }: ProjectCardProps) {
   return (
-    <div
-      className={`group border border-border rounded-lg overflow-hidden bg-background hover:border-primary/50 transition ${featured ? "md:col-span-1" : ""}`}
+    <motion.div
+      variants={cardVariants}
+      whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+      className={`group border border-border rounded-lg overflow-hidden bg-background hover:border-primary/50 transition-colors ${featured ? "md:col-span-1" : ""}`}
     >
       <div className="p-6 space-y-4 h-full flex flex-col justify-between">
         <div>
           <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition">{project.title}</h3>
           <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
-          <div className="flex flex-wrap gap-2">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.05,
+                },
+              },
+            }}
+            className="flex flex-wrap gap-2"
+          >
             {project.tags.map((tag) => (
-              <span
+              <motion.span
                 key={tag}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.8 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
                 className="text-xs px-3 py-1 rounded-full bg-accent/20 text-accent-foreground border border-accent/30"
               >
                 {tag}
-              </span>
+              </motion.span>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex gap-2 pt-4">
@@ -131,6 +201,6 @@ function ProjectCard({ project, featured }: ProjectCardProps) {
           </Button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
