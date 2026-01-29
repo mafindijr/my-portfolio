@@ -19,7 +19,7 @@ https://mafindijr.vercel.app/
 - Next.js
 - TypeScript
 - React
-- (Update with CSS framework or tooling you used)
+- Tailwind Css
 
 ## Getting started
 
