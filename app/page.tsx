@@ -4,7 +4,7 @@ import { Projects } from "@/components/projects"
 import { Experience } from "@/components/experience"
 import { About } from "@/components/about"
 import { Certifications } from "@/components/certifications"
-import { Reviews } from "@/components/reviews"
+// import { Reviews } from "@/components/reviews"
 import { Community } from "@/components/community"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
@@ -18,7 +18,7 @@ export default function Home() {
       <Experience />
       <About />
       <Certifications />
-      <Reviews />
+      {/* <Reviews /> */}
       <Community />
       <ContactForm />
       <Footer />
