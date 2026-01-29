@@ -13,13 +13,13 @@ const VOLUNTEER_WORK = [
     {
         organization: "Sandlip Oasis",
         role: "Front-End Developtment Mentor",
-        description: "Description of your volunteer work and the impact you made.",
+        description: "Mentored aspiring frontend developers on React, Next.js, and best practices, helping them build projects and improve coding skills.",
         period: "2024 - onGoing",
     },
     {
-        organization: "Another Organization",
-        role: "Another Role",
-        description: "Details about your contribution and responsibilities.",
+        organization: "Kena Solutions",
+        role: "Frontend Developer Volunteer",
+        description: "Developed responsive UI components with NextJs, optimized performance, and ensured cross-browser compatibility for web applications.",
         period: "Start Year - End Year",
     },
 ]
