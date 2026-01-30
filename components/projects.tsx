@@ -178,7 +178,7 @@ function ProjectCard({ project, featured }: ProjectCardProps) {
                                     hidden: { opacity: 0, scale: 0.8 },
                                     visible: { opacity: 1, scale: 1 },
                                 }}
-                                className="text-xs px-3 py-1 rounded-full bg-accent/20 text-accent-foreground border border-accent/30"
+                                className="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20"
                             >
                                 {tag}
                             </motion.span>
