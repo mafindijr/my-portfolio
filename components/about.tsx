@@ -6,7 +6,8 @@ const SKILLS = [
     { category: "Frontend", skills: ["React", "Next.js", "TypeScript", "TailwindCSS", "Framer Motion"] },
     { category: "Web3", skills: ["Solidity", "Ethers.js", "Web3.js", "Wagmi", "Smart Contracts"] },
     { category: "Backend", skills: ["Node.js", "PostgreSQL", "Supabase", "REST APIs", "GraphQL"] },
-    { category: "Tools", skills: ["Git", "Docker", "Vercel", "GitHub", "VS Code"] },
+    { category: "Artificial Intelligence", skills: ["Generative AI", "Prompt Engineer",] },
+    { category: "Tools", skills: ["Git", "Docker", "Vercel", "GitHub", "GitLab", "VS Code", "N8N"] },
 ]
 
 const VOLUNTEER_WORK = [
@@ -14,13 +15,13 @@ const VOLUNTEER_WORK = [
         organization: "Sandlip Oasis",
         role: "Front-End Developtment Mentor",
         description: "Mentored aspiring frontend developers on React, Next.js, and best practices, helping them build projects and improve coding skills.",
-        period: "2024 - onGoing",
+        period: "2024 - On going",
     },
     {
         organization: "Kena Solutions",
         role: "Frontend Developer Volunteer",
         description: "Developed responsive UI components with NextJs, optimized performance, and ensured cross-browser compatibility for web applications.",
-        period: "Start Year - End Year",
+        period: "2025 - On going",
     },
 ]
 

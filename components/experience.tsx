@@ -144,7 +144,7 @@ export function Experience() {
                         visible: { opacity: 1, scale: 1 },
                       }}
                       whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-                      className="text-xs px-3 py-1 rounded-full bg-accent/20 text-accent-foreground border border-accent/30 hover:bg-accent/30 transition cursor-default"
+                      className="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20 hover:bg-secondary/20 transition cursor-default"
                     >
                       {tech}
                     </motion.span>
