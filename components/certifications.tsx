@@ -23,6 +23,12 @@ const CERTIFICATIONS = [
     date: "2024",
     description: "Intensive training in blockchain development on Educhain ecosystem",
   },
+  {
+    title: "Certified Generative AI",
+    issuer: "Deeptech/3MTT Nigeria",
+    date: "2025",
+    description: "Intensive training with hands on in Generative Ai, learn about gen ai and prompt engineering"
+  }
 ]
 
 const ACHIEVEMENTS = [
