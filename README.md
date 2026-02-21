@@ -69,11 +69,8 @@ Recommended: Vercel (first-class support for Next.js). Your site is currently ho
 
 ## Screenshots
 
-Add screenshots to the repository and update the path below:
-
 ![Screenshot](/public/screenshots/screenshot.png)
 
-(Replace the image at /public/screenshots/screenshot.png with your real screenshot.)
 
 ## Contributing
 
