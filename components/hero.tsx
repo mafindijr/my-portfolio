@@ -106,7 +106,7 @@ export function Hero() {
             </motion.div>
             <motion.div variants={buttonVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button variant="ghost" size="lg" asChild>
-                <a href="/AbdulrazakLatex_resume.pdf" download>
+                <a href="/Mafindijr_Resume.pdf" download>
                   <Download className="mr-2" size={18} />
                   Resume
                 </a>
