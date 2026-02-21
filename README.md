@@ -69,7 +69,7 @@ Recommended: Vercel (first-class support for Next.js). Your site is currently ho
 
 ## Screenshots
 
-![Screenshot](/public/screenshots/screenshot.png)
+(/public/screenshots/screenshot.png)
 
 
 ## Contributing
