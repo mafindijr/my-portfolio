@@ -10,12 +10,38 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
+  // Handle form submission
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus("idle")
+    e.preventDefault()              // Prevent page reload
+    setIsSubmitting(true)           // Disable button while sending
+    setSubmitStatus("idle")         // Reset status
 
+    // Collect form data
+    const formData = new FormData(e.currentTarget)
+    const data = Object.fromEntries(formData.entries())
 
+    try {
+      // Send data to backend API
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      const result = await res.json()
+
+      if (result.status === "success") {
+        setSubmitStatus("success")
+        e.currentTarget.reset()     // Clear form after success
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch (error) {
+      console.error(error)
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
