@@ -1,6 +1,9 @@
 import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from "next/server";
 
+// Ensure this route runs in the Node.js runtime so native Node modules work
+export const runtime = "nodejs";
+
 /**
  * Configure NodeMailer transporter
  * Using Gmail SMTP as an example
