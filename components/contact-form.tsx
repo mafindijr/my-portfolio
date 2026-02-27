@@ -5,40 +5,45 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, MessageSquare, User } from "lucide-react"
-// import { sendContactEmail } from "@/app/actions/contact"
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
+  // Handle form submission
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus("idle")
+    e.preventDefault()              
+    setIsSubmitting(true)           
+    setSubmitStatus("idle")  
 
-  //   try {
-  //     const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget;       
 
-  //     const result = await sendContactEmail({
-  //       name: formData.get("name") as string,
-  //       email: formData.get("email") as string,
-  //       subject: formData.get("subject") as string,
-  //       message: formData.get("message") as string,
-  //     })
+    // Collect form data
+    const formData = new FormData(e.currentTarget)
+    const data = Object.fromEntries(formData.entries())
 
-  //     if (result.success) {
-  //       setSubmitStatus("success")
-  //       e.currentTarget.reset()
-  //       setTimeout(() => setSubmitStatus("idle"), 5000)
-  //     } else {
-  //       setSubmitStatus("error")
-  //     }
-  //   } catch (error) {
-  //     console.log("[v0] Contact form error:", error)
-  //     setSubmitStatus("error")
-  //   } finally {
-  //     setIsSubmitting(false)
-  //   }
+    try {
+      // Send data to backend API
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      const result = await res.json()
+
+      if (result.status === "success") {
+        setSubmitStatus("success")
+        form.reset()     // Clear form after success
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch (error) {
+      console.error(error)
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
