@@ -12,9 +12,11 @@ export function ContactForm() {
 
   // Handle form submission
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()              // Prevent page reload
-    setIsSubmitting(true)           // Disable button while sending
-    setSubmitStatus("idle")         // Reset status
+    e.preventDefault()              
+    setIsSubmitting(true)           
+    setSubmitStatus("idle")  
+
+    const form = e.currentTarget;       
 
     // Collect form data
     const formData = new FormData(e.currentTarget)
@@ -32,7 +34,7 @@ export function ContactForm() {
 
       if (result.status === "success") {
         setSubmitStatus("success")
-        e.currentTarget.reset()     // Clear form after success
+        form.reset()     // Clear form after success
       } else {
         setSubmitStatus("error")
       }

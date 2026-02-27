@@ -13,8 +13,8 @@ const transporter = nodemailer.createTransport({
   port: 465,          // 465 for secure SMTP
   secure: true,       // must be true for 465
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.NEXT_EMAIL_USER,
+    pass: process.env.NEXT_EMAIL_PASS,
   },
 });
 
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
     // Send email
     await transporter.sendMail({
       from: `"${name}" <${email}>`,          // Sender (from form)
-      to: process.env.EMAIL_USER,            // Your email
+      to: process.env.NEXT_EMAIL_USER,            // Your email
       subject: `[Portfolio Contact] ${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `<p><strong>Name:</strong> ${name}</p>
