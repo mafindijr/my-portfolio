@@ -21,15 +21,15 @@ const EXPERIENCE = [
     duration: "2 years",
     technologies: ["React", "Next.js", "TypeScript"],
   },
-  // {
-  //   company: "Web Agency",
-  //   position: "Frontend Developer",
-  //   description:
-  //     "Developed responsive web applications for various clients, focused on UI/UX and performance optimization.",
-  //   period: "2019 - 2020",
-  //   duration: "1 year",
-  //   technologies: ["React", "TailwindCSS", "JavaScript", "CSS"],
-  // },
+  {
+    company: "The Safe Hub",
+    position: "Web Developer",
+    description:
+      "Developed responsive web applications for various clients, focused on UI/UX and performance optimization.",
+    period: "2026 - Present",
+    duration: "1 year",
+    technologies: ["HTML" "CSS", "JavaScript", "React", "TailwindCSS",],
+  },
 ]
 
 const containerVariants = {
