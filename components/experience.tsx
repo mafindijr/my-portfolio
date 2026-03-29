@@ -28,7 +28,7 @@ const EXPERIENCE = [
       "Developed responsive web applications for various clients, focused on UI/UX and performance optimization.",
     period: "2026 - Present",
     duration: "1 year",
-    technologies: ["HTML" "CSS", "JavaScript", "React", "TailwindCSS",],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "TailwindCSS",],
   },
 ]
 
