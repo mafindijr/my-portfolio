@@ -10,7 +10,7 @@ const EXPERIENCE = [
     description:
       "frontend development of customer-facing applications, mentored junior developers, and optimized performance.",
     period: "2024 - Present",
-    duration: "2 year",
+    duration: "1 year",
     technologies: ["React", "Next.js", "TypeScript", "Web3"],
   },
   {
@@ -18,7 +18,7 @@ const EXPERIENCE = [
     position: "Frontend Developer",
     description: "frontend development of a fintech web app with Ai integration, a payment base system.",
     period: "2025 - Present",
-    duration: "2 years",
+    duration: "1 year",
     technologies: ["React", "Next.js", "TypeScript"],
   },
   {
