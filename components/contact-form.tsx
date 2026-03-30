@@ -7,16 +7,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Mail, MessageSquare, User } from "lucide-react"
 
 export function ContactForm() {
+
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
   // Handle form submission
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()              
-    setIsSubmitting(true)           
-    setSubmitStatus("idle")  
 
-    const form = e.currentTarget;       
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    const form = e.currentTarget;
 
     // Collect form data
     const formData = new FormData(e.currentTarget)
@@ -139,11 +141,13 @@ export function ContactForm() {
                   Message sent successfully! I'll get back to you soon.
                 </div>
               )}
+
               {submitStatus === "error" && (
                 <div className="p-4 rounded-md bg-red-500/10 border border-red-500/30 text-red-700 dark:text-red-400">
                   Failed to send message. Please try again or email me directly.
                 </div>
               )}
+
             </form>
           </CardContent>
         </Card>
