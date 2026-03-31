@@ -10,7 +10,7 @@ const EXPERIENCE = [
     description:
       "frontend development of customer-facing applications, mentored junior developers, and optimized performance.",
     period: "2024 - Present",
-    duration: "2 year",
+    duration: "1 year",
     technologies: ["React", "Next.js", "TypeScript", "Web3"],
   },
   {
@@ -18,18 +18,18 @@ const EXPERIENCE = [
     position: "Frontend Developer",
     description: "frontend development of a fintech web app with Ai integration, a payment base system.",
     period: "2025 - Present",
-    duration: "2 years",
+    duration: "1 year",
     technologies: ["React", "Next.js", "TypeScript"],
   },
-  // {
-  //   company: "Web Agency",
-  //   position: "Frontend Developer",
-  //   description:
-  //     "Developed responsive web applications for various clients, focused on UI/UX and performance optimization.",
-  //   period: "2019 - 2020",
-  //   duration: "1 year",
-  //   technologies: ["React", "TailwindCSS", "JavaScript", "CSS"],
-  // },
+  {
+    company: "The Safe Hub",
+    position: "Web Developer",
+    description:
+      "Developed responsive web applications for various clients, focused on UI/UX and performance optimization.",
+    period: "2026 - Present",
+    duration: "1 year",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "TailwindCSS",],
+  },
 ]
 
 const containerVariants = {

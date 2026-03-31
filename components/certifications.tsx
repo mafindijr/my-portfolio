@@ -18,9 +18,9 @@ const CERTIFICATIONS = [
     description: "Mastered web3 basics, and learn about ethereum ecosystem",
   },
   {
-    title: "Certified Edu Chain Learner",
+    title: "Certified Edu Chain Builer",
     issuer: "HackQust",
-    date: "2024",
+    date: "2025",
     description: "Intensive training in blockchain development on Educhain ecosystem",
   },
   {
@@ -28,6 +28,18 @@ const CERTIFICATIONS = [
     issuer: "Deeptech/3MTT Nigeria",
     date: "2025",
     description: "Intensive training with hands on in Generative Ai, learn about gen ai and prompt engineering"
+  },
+  {
+    title: "Certified Generative AI in Practice",
+    issuer: "Solo learn",
+    date: "2025",
+    description: "Intensive training with hands on in Generative Ai, learn about gen ai and prompt engineering"
+  },
+  {
+    title: "English Profiency Certifiate",
+    issuer: "EF ES",
+    date: "2025",
+    description: "Pass english profiency exams with B1 as intermediate by ES EF, took exams on listening, writing and speaking"
   }
 ]
 
