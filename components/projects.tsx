@@ -6,6 +6,15 @@ import { motion } from "framer-motion"
 
 const PROJECTS = [
     {
+        title: "TradeDNA",
+        description:
+            "Wallet analytics dashboard for on-chain traders. Search any address to view PnL, win rate, trading activity, and token-level performance across supported networks.",
+        tags: ["Next(App Router)", "TailwindCSS", "Shadcn UI", "Etherjs","TypeScript"],
+        github: "https://github.com/mafindijr/TradeDNA",
+        live: "https://trade-dna.vercel.app/",
+        featured: true,
+    },
+    {
         title: "Gym Management System",
         description:
             "A full-stack web application for comprehensive gym operations management. This is my final year school project demonstrating modern full-stack development with React, Node.js, Express, and MongoDB.",
