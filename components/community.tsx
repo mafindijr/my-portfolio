@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Users, MessageCircle, BookOpen, Zap } from "lucide-react"
+import { Users, MessageCircle, Zap } from "lucide-react"
 import { motion } from "framer-motion"
 
 

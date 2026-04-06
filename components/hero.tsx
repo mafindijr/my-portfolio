@@ -53,7 +53,7 @@ export function Hero() {
         >
           <motion.div variants={itemVariants}>
             <p className="text-primary font-semibold text-lg mb-2">Welcome</p>
-            <h1 className="text-4xl md:text-6xl font-bold text-balance leading-tight mb-2">I'm Abdulrazak Iliyasu Mafindi</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-balance leading-tight mb-2">I&apos;m Abdulrazak Iliyasu Mafindi</h1>
           </motion.div>
 
           <motion.div variants={itemVariants}>
@@ -69,7 +69,7 @@ export function Hero() {
           <motion.div variants={itemVariants} className="bg-primary/10 border border-primary/20 rounded-lg p-4">
             <h3 className="font-semibold text-primary mb-2">Generative AI Expertise</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              I'm passionate about Generative AI and its intersection with web development. I build intelligent
+              I&apos;m passionate about Generative AI and its intersection with web development. I build intelligent
               applications leveraging LLMs, prompt engineering, and AI-powered features to create next-generation user
               experiences. From RAG systems to fine-tuned models, I integrate cutting-edge AI into Web3 dApps and modern
               web applications.

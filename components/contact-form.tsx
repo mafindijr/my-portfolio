@@ -54,7 +54,7 @@ export function ContactForm() {
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-muted-foreground">
-            Have a project in mind or want to discuss opportunities? Drop me a message and I'll get back to you as soon
+            Have a project in mind or want to discuss opportunities? Drop me a message and I&apos;ll get back to you as soon
             as possible.
           </p>
         </div>
@@ -138,7 +138,7 @@ export function ContactForm() {
 
               {submitStatus === "success" && (
                 <div className="p-4 rounded-md bg-green-500/10 border border-green-500/30 text-green-700 dark:text-green-400">
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </div>
               )}
 

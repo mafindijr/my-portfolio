@@ -1,17 +1,13 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-
-const geist = Geist({ subsets: ["latin"], preload: false })
-const geistMono = Geist_Mono({ subsets: ["latin"], preload: false })
+import type { Metadata } from "next"
+import type { ReactNode } from "react"
+import { Analytics } from "@vercel/analytics/next"
+import ChatWidget from "@/components/chat/ChatWidget"
 
 export const metadata: Metadata = {
   title: "Mafindijr",
   description:
     "Portfolio showcasing modern frontend development and Web3/blockchain projects. React, Next.js, and decentralized applications.",
-  generator: "v0.app",
   icons: {
     icon: [
       {
@@ -34,12 +30,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: ReactNode
 }>) {
   return (
     <html lang="en">
       <body className={`font-sans antialiased`}>
         {children}
+        <ChatWidget />
         <Analytics />
       </body>
     </html>
