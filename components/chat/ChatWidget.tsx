@@ -73,12 +73,13 @@ export default function ChatWidget() {
         body: JSON.stringify({ message: trimmed }),
       })
 
+      const data = await response.json().catch(() => null)
       if (!response.ok) {
-        throw new Error("Request failed")
+        const errorMessage = data?.reply || "Request failed"
+        throw new Error(errorMessage)
       }
 
-      const data = (await response.json()) as { reply?: string }
-      const replyText = data.reply?.trim() || "Sorry, I couldn't generate a response."
+      const replyText = data?.reply?.trim() || "Sorry, I couldn't generate a response."
 
       setMessages((prev) => [
         ...prev,
@@ -109,6 +110,13 @@ export default function ChatWidget() {
     }
   }
 
+  const clearChat = () => {
+    setMessages([])
+    if (typeof window !== "undefined") {
+      localStorage.removeItem(STORAGE_KEY)
+    }
+  }
+
   const toggleOpen = () => {
     setIsOpen((prev) => !prev)
   }
@@ -125,6 +133,7 @@ export default function ChatWidget() {
         onSend={handleSend}
         onClose={() => setIsOpen(false)}
         onInputKeyDown={handleInputKeyDown}
+        onClear={clearChat}
         endRef={endRef}
       />
     </>
