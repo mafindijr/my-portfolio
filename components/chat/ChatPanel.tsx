@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { SendHorizontal, X } from "lucide-react"
+import { SendHorizontal, X, Trash2 } from "lucide-react"
 
 export type ChatMessage = {
   id: string
@@ -18,7 +18,8 @@ type ChatPanelProps = {
   onSend: () => void
   onClose: () => void
   onInputKeyDown: (event: React.KeyboardEvent<HTMLInputElement>) => void
-  endRef: React.RefObject<HTMLDivElement>
+  onClear: () => void
+  endRef: React.RefObject<HTMLDivElement | null>
 }
 
 export default function ChatPanel({
@@ -30,6 +31,7 @@ export default function ChatPanel({
   onSend,
   onClose,
   onInputKeyDown,
+  onClear,
   endRef,
 }: ChatPanelProps) {
   return (
@@ -46,14 +48,24 @@ export default function ChatPanel({
           <p className="text-sm font-semibold text-primary">Ask Me Anything</p>
           <p className="text-xs text-muted-foreground">Portfolio AI assistant</p>
         </div>
-        <button
-          type="button"
-          onClick={onClose}
-          className="rounded-full p-2 text-muted-foreground transition hover:bg-accent hover:text-foreground"
-          aria-label="Close chat"
-        >
-          <X className="h-4 w-4" />
-        </button>
+        <div className="flex gap-1">
+          <button
+            type="button"
+            onClick={onClear}
+            className="rounded-full p-2 text-muted-foreground transition hover:bg-accent hover:text-foreground"
+            aria-label="Clear chat"
+          >
+            <Trash2 className="h-4 w-4" />
+          </button>
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-full p-2 text-muted-foreground transition hover:bg-accent hover:text-foreground"
+            aria-label="Close chat"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
       </div>
 
       <div className="flex h-[60vh] flex-col gap-3 overflow-y-auto px-4 py-4 sm:h-[420px]">
