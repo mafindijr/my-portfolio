@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 const SKILLS = [
     { category: "Frontend", skills: ["React", "Next.js", "TypeScript", "TailwindCSS", "Framer Motion"] },
@@ -77,7 +78,7 @@ export function About() {
                             style={{ transform: "rotate(-6deg)" }}
                         >
                             <a href="/IMG_5546.JPG" target="_blank">
-                                <img src="/IMG_5546.JPG" alt="mafindijr" className="w-full h-full object-cover" />
+                                <Image src="/IMG_5546.JPG" alt="mafindijr" width={192} height={192} className="w-full h-full object-cover" />
                             </a>
                         </motion.div>
                     </div>
@@ -92,17 +93,17 @@ export function About() {
                         <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
                         <div className="space-y-4 text-muted-foreground leading-relaxed">
                             <p>
-                                I'm a passionate frontend developer and Web3/Gen Ai enthusiast with over 3 years of experience building modern
+                                I&apos;m a passionate frontend developer and Web3/Gen Ai enthusiast with over 3 years of experience building modern
                                 web applications. My journey started way back in 2021 with a love for creating beautiful, performant user interfaces and
                                 evolved to include blockchain development and Ai integrations.
                             </p>
                             <p>
                                 I specialize in React and Next.js, with a deep understanding of state management, performance
-                                optimization, and modern CSS techniques. On the Web3 side, I've built decentralized applications,
+                                optimization, and modern CSS techniques. On the Web3 side, I&apos;ve built decentralized applications,
                                 integrated smart contracts, and worked extensively with Ethereum ecosystem tools.
                             </p>
                             <p>
-                                When I'm not coding, I contribute to open-source projects, write technical articles, and explore
+                                When I&apos;m not coding, I contribute to open-source projects, write technical articles, and explore
                                 emerging technologies in the web and blockchain space.
                             </p>
                         </div>

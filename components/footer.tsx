@@ -13,9 +13,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 mb-12">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Let's Work Together</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Let&apos;s Work Together</h2>
             <p className="text-muted-foreground leading-relaxed max-w-md">
-              I'm always interested in hearing about new projects and opportunities. Feel free to reach out if you'd
+              I&apos;m always interested in hearing about new projects and opportunities. Feel free to reach out if you&apos;d
               like to collaborate or just have a chat.
             </p>
           </div>
