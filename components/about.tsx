@@ -8,7 +8,7 @@ const SKILLS = [
     { category: "Web3", skills: ["Solidity", "Ethers.js", "Web3.js", "Wagmi", "Smart Contracts"] },
     { category: "Backend", skills: ["Node.js", "PostgreSQL", "Supabase", "REST APIs", "GraphQL"] },
     { category: "Artificial Intelligence", skills: ["Generative AI", "Prompt Engineer",] },
-    { category: "Tools", skills: ["Git", "Docker", "Vercel", "GitHub", "GitLab", "VS Code", "N8N"] },
+    { category: "Tools", skills: ["Git", "Docker", "Vercel", "GitHub", "GitLab", "VS Code", "N8N", "WordPress"] },
 ]
 
 const VOLUNTEER_WORK = [
