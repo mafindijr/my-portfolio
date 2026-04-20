@@ -19,6 +19,12 @@ const VOLUNTEER_WORK = [
         period: "2024 - On going",
     },
     {
+        organization: "The Safe Hub",
+        role: "Web Developtment Lead Inatructor",
+        description: "Lead and Mentored aspiring web developers on HTML,CSS,JavaScript, and best practices, helping them build projects and improve coding skills.",
+        period: "2024 - On going",
+    },
+    {
         organization: "Kena Solutions",
         role: "Frontend Developer Volunteer",
         description: "Developed responsive UI components with NextJs, optimized performance, and ensured cross-browser compatibility for web applications.",
