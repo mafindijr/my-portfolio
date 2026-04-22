@@ -37,7 +37,7 @@ export default function ChatPanel({
   return (
     <section
       aria-hidden={!isOpen}
-      className={`fixed left-2 top-1/2 z-40 w-[94vw] max-w-105 -translate-y-1/2 rounded-3xl border border-border bg-card/95 shadow-2xl backdrop-blur transition-all duration-300 sm:left-4 sm:w-[380px] ${
+      className={`fixed left-2 top-1/2 z-40 w-[94vw] max-w-105 -translate-y-1/2 rounded-3xl border border-border bg-card/95 shadow-2xl backdrop-blur transition-all duration-300 sm:left-4 sm:w-95 ${
         isOpen
           ? "translate-x-0 opacity-100"
           : "-translate-x-full opacity-0 pointer-events-none"
@@ -68,7 +68,7 @@ export default function ChatPanel({
         </div>
       </div>
 
-      <div className="flex h-[60vh] flex-col gap-3 overflow-y-auto px-4 py-4 sm:h-[420px]">
+      <div className="flex h-[60vh] flex-col gap-3 overflow-y-auto px-4 py-4 sm:h-105">
         {messages.length === 0 && (
           <div className="rounded-2xl border border-dashed border-border bg-muted/40 p-4 text-sm text-muted-foreground">
             Ask about my projects, skills, or experience. I will only answer questions about the portfolio.

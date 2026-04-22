@@ -8,7 +8,7 @@ const SKILLS = [
     { category: "Web3", skills: ["Solidity", "Ethers.js", "Web3.js", "Wagmi", "Smart Contracts"] },
     { category: "Backend", skills: ["Node.js", "PostgreSQL", "Supabase", "REST APIs", "GraphQL"] },
     { category: "Artificial Intelligence", skills: ["Generative AI", "Prompt Engineer",] },
-    { category: "Tools", skills: ["Git", "Docker", "Vercel", "GitHub", "GitLab", "VS Code", "N8N"] },
+    { category: "Tools", skills: ["Git", "Docker", "Vercel", "GitHub", "GitLab", "VS Code", "N8N", "WordPress"] },
 ]
 
 const VOLUNTEER_WORK = [
@@ -16,6 +16,12 @@ const VOLUNTEER_WORK = [
         organization: "Sandlip Oasis",
         role: "Front-End Developtment Mentor",
         description: "Mentored aspiring frontend developers on React, Next.js, and best practices, helping them build projects and improve coding skills.",
+        period: "2024 - On going",
+    },
+    {
+        organization: "The Safe Hub",
+        role: "Web Developtment Lead Inatructor",
+        description: "Lead and Mentored aspiring web developers on HTML,CSS,JavaScript, and best practices, helping them build projects and improve coding skills.",
         period: "2024 - On going",
     },
     {

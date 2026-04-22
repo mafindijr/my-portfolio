@@ -15,6 +15,7 @@ const createId = () => {
 }
 
 export default function ChatWidget() {
+  
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [input, setInput] = useState("")
