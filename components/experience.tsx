@@ -22,10 +22,10 @@ const EXPERIENCE = [
     technologies: ["React", "Next.js", "TypeScript"],
   },
   {
-    company: "The Safe Hub",
-    position: "Web Developer",
+    company: "The Safe Hub (Mindshift Movement",
+    position: " Lead Web Development Instructor",
     description:
-      "Developed responsive web applications for various clients, focused on UI/UX and performance optimization.",
+      "Mentored junior developers, and optimized performance, & Developed responsive web applications for various clients, focused on UI/UX and performance optimization.",
     period: "2026 - Present",
     duration: "1 year",
     technologies: ["HTML", "CSS", "JavaScript", "React", "TailwindCSS",],

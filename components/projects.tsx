@@ -15,12 +15,30 @@ const PROJECTS = [
         featured: true,
     },
     {
+        title: "FlowState",
+        description:
+            "A premium real estate marketplace reimagined for the modern era. Built with Next.js and Tailwind CSS, FlowState provides an intuitive platform for discovering, renting, and buying high-end properties with a focus on verified listings and a seamless user experience. Just frontend only",
+        tags: ["Next(App Router)", "TailwindCSS","TypeScript"],
+        github: "https://github.com/mafindijr/FlowState",
+        live: "https://flow-state-ashy.vercel.app/",
+        featured: true,
+    },
+    {
         title: "Gym Management System",
         description:
             "A full-stack web application for comprehensive gym operations management. This is my final year school project demonstrating modern full-stack development with React, Node.js, Express, and MongoDB.",
         tags: ["React", "TailwindCSS", "Mongodb", "JWT Auth", "Node.js", "Express.js"],
         github: "https://github.com/mafindijr/Gym-Management-System",
         live: "https://nyame-gym.vercel.app/",
+        featured: true,
+    },
+    {
+        title: "SubTracker",
+        description:
+            "SubTracker is a modern subscription management dashboard built with Next.js and TypeScript that helps users track recurring services, monitor monthly spending (including yearly-to-monthly cost normalization), manage active/inactive plans, and stay ahead of upcoming renewals with a clean, responsive interface and local data persistence.Just frontend only",
+        tags: ["Nextjs", "TailwindCSS", "Typescript"],
+        github: "https://github.com/mafindijr/subtracker",
+        live: "https://subtracker-six-black.vercel.app/",
         featured: true,
     },
     {
