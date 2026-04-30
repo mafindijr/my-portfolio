@@ -35,7 +35,7 @@ const PROJECTS = [
     {
         title: "SubTracker",
         description:
-            " Telegram Integration, anage, and track events with blockchain-inspired features. Responsive design optimized for all devices. Just Front-End only",
+            " Telegramon, anage, and track events with blockchain-inspired features. Responsive design optimized for all devices. Just Front-End only",
         tags: ["HTML", "CSS", "Javascript"],
         github: "https://github.com/mafindijr/managemyschedulebot",
         live: "https://t.me/Managemyshedulebot",
