@@ -15,12 +15,30 @@ const PROJECTS = [
         featured: true,
     },
     {
+        title: "FlowState",
+        description:
+            "Wallet analytics dashboard for on-chain traders. Search any address to view PnL, win rate, trading activity, and token-level performance across supported networks.",
+        tags: ["Next(App Router)", "TailwindCSS", "Shadcn UI", "Etherjs","TypeScript"],
+        github: "https://github.com/mafindijr/TradeDNA",
+        live: "https://trade-dna.vercel.app/",
+        featured: true,
+    },
+    {
         title: "Gym Management System",
         description:
             "A full-stack web application for comprehensive gym operations management. This is my final year school project demonstrating modern full-stack development with React, Node.js, Express, and MongoDB.",
         tags: ["React", "TailwindCSS", "Mongodb", "JWT Auth", "Node.js", "Express.js"],
         github: "https://github.com/mafindijr/Gym-Management-System",
         live: "https://nyame-gym.vercel.app/",
+        featured: true,
+    },
+    {
+        title: "SubTracker",
+        description:
+            " Telegram Integration, anage, and track events with blockchain-inspired features. Responsive design optimized for all devices. Just Front-End only",
+        tags: ["HTML", "CSS", "Javascript"],
+        github: "https://github.com/mafindijr/managemyschedulebot",
+        live: "https://t.me/Managemyshedulebot",
         featured: true,
     },
     {
